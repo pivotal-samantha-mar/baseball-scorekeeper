@@ -1,5 +1,6 @@
 package com.example.samanthamar.baseballscore;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -179,12 +180,24 @@ public class MainActivity extends AppCompatActivity {
     public void homeStatus(String status) {
         TextView homeUpdate = (TextView) findViewById(R.id.homeUpdate);
         homeUpdate.setText(String.valueOf(status));
+        if (status == "OUT") {
+            homeUpdate.setTextColor(Color.RED);
+        }
+        if (status == "WALK") {
+            homeUpdate.setTextColor(Color.GREEN);
+        }
     }
 
     //Display away update
     public void awayStatus(String status) {
         TextView awayUpdate = (TextView) findViewById(R.id.awayUpdate);
         awayUpdate.setText(String.valueOf(status));
+        if (status == "OUT") {
+            awayUpdate.setTextColor(Color.RED);
+        }
+        if (status == "WALK") {
+            awayUpdate.setTextColor(Color.GREEN);
+        }
     }
 
 
